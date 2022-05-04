@@ -1,0 +1,25 @@
+/* 
+.buttonContainer{
+    justify-content: center;
+    align-items: center;
+} */
+.sortContainer{
+    display :flex;
+    flex-direction:column;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width:50%;
+    padding: 10px;
+    font-weight: bold !important
+}
+.sortLinkContainer{
+  width:100%;
+  display: inline-block;
+  text-decoration: none;
+  color:black;
+
+}
+.sortLinkContainer :hover{
+    background-color:black;
+    color: white !important;
+}

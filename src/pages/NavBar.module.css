@@ -1,0 +1,72 @@
+.mainContainer {
+  background-color: #fff;
+  margin: 0 0 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 5px 24px rgba(149, 157, 165, 0.4);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 15px 50px;
+}
+.movietLink {
+  text-decoration: none;
+  color: #686b6e;
+  font-weight: bold;
+  /* border-bottom: 3px solid #1a73e8; */
+  border-radius: 2px;
+  padding: 0 10px;
+  transition: all 0.2s ease;
+}
+.movietLink:hover {
+  color: #0f67db;
+  border-bottom-color: #0b499b;
+}
+.disabled {
+  display: none;
+}
+.iconContainer {
+  padding: 10px;
+}
+.iconContainer a {
+  margin-right: 20px;
+}
+.setting {
+  cursor: pointer;
+}
+.favoriteLink {
+  color: black;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 13px 11px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    padding: 13px 11px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    padding: 13px 11px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    padding: 13px 11px;
+  }
+}
+
+@media (max-width: 320) {
+  .container {
+    padding: 13px 11px;
+  }
+}

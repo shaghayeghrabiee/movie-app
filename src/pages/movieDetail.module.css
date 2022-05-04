@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 150px 150px 50px;
+  padding: 20px;
+  border: 1px solid silver;
+  background-color: #fff;
+  border-radius: 10px;
+  background-color: rgb(243, 243, 250);
+}
+
+.image {
+  overflow: hidden;
+}
+
+.textContainer {
+  text-align: left;
+  margin-left: 30px;
+  padding: 20px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.textContainer h3 {
+  color: #1a73e8;
+  margin: 20px 0 30px;
+}
+
+.description {
+  color: rgb(62, 62, 62);
+  margin-bottom: 30px;
+}
+
+.title {
+  color: rgb(62, 62, 62);
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.image {
+  width: 450px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonContainer a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #4e4f50;
+  color: white;
+  padding: 7px 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+    rgba(0, 0, 0, 0.07) 0px 9px 16px;
+}
+
+.buttonContainer a:hover {
+  background-color: #bdc1c5;
+  color: black;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 150px 50px;
+  }
+  img {
+    width: 100%;
+    padding: 5px;
+  }
+  .textContainer {
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  img {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 150px 30px;
+  }
+  img {
+    width: 100%;
+    padding: 5px;
+  }
+  .textContainer {
+    margin: auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 150px 30px;
+    padding: 10px;
+  }
+  img {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .textContainer {
+    margin: auto;
+  }
+}
+
+@media (max-width: 320) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin: 150px 30px;
+    padding: 10px;
+  }
+  img {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .textContainer {
+    margin: auto;
+  }
+}
