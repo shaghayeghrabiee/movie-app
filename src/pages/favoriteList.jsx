@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { favoriteContext } from "../context/favoriteMovieContextProvider";
 import { Link } from "react-router-dom";
+import Grid from "@mui/material/Grid";
 import GradeOutlinedIcon from "@mui/icons-material/GradeOutlined";
 import styles from "./favorite.module.css";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
@@ -10,7 +11,7 @@ const FavoriteList = () => {
   return (
     <div className={styles.mainContainer}>
       <Link to="/home"> Back to home</Link>
-      <div className={styles.container}>
+      <Grid className={styles.container} item xs={4}>
         {state.selectedItem.length > 0 ? (
           <div className={styles.favoriteContainer}>
             {state.selectedItem.map((item) => (
@@ -41,7 +42,7 @@ const FavoriteList = () => {
         ) : (
           <span>Your list is empty</span>
         )}
-      </div>
+      </Grid>
     </div>
   );
 };
