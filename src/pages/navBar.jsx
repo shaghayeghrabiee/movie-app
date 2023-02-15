@@ -41,10 +41,17 @@ const NavBar = () => {
             </Link>
           </div>
           <div className={styles.iconContainer}>
-            <Link to="/favoriteList">
+            <Link to="/favoriteList" title="Favorite">
               <FavoriteBorderOutlinedIcon className={styles.favoriteLink} />
             </Link>
-            <SettingsIcon onClick={handleShow} className={styles.setting} />
+            <div title="Change output">
+              <SettingsIcon
+                title="Favorite"
+                onClick={handleShow}
+                className={styles.setting}
+              />
+            </div>
+
             <form>
               <input
                 type="text"
@@ -52,7 +59,7 @@ const NavBar = () => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
               />
-              <button onClick={handleClick}>Search</button> 
+              <button onClick={handleClick}>Search</button>
             </form>
           </div>
         </div>

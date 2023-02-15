@@ -10,7 +10,7 @@ const MoviesList = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.title}>
-        <h2>Hello Verycreatives</h2>
+        <h2>Welcome to my website</h2>
         <p>check these movies out</p>
       </div>
       {movies?.length > 0 ? (
