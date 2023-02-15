@@ -26,7 +26,9 @@ const MovieContextProvider = (props) => {
   }, []);
 
   return (
-    <movieContext.Provider value={{ movies, sortPopular, sortHighRate }}>
+    <movieContext.Provider
+      value={{ movies, sortPopular, sortHighRate, setMovies }}
+    >
       {props.children}
     </movieContext.Provider>
   );

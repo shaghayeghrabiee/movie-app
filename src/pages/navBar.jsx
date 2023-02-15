@@ -1,7 +1,7 @@
 import React, { useState,useContext ,useEffect} from 'react';
 import { Modal,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { favoriteContext } from '../context/favoriteMovieContextProvider';
+// import { favoriteContext } from '../context/favoriteMovieContextProvider';
 import { movieContext } from "../context/movieContextProvider";
 import styles from "./NavBar.module.css";
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -9,15 +9,23 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import Sort from './sort';
 
 const NavBar = () => {
-    const {state} = useContext(favoriteContext);
-    const { movies } = useContext(movieContext);
+    // const {state} = useContext(favoriteContext);
+    const { movies, setMovies } = useContext(movieContext);
     const [setting,setSetting]=useState(false);
+    const [input,setInput]=useState('');
 
     const handleShow=()=>{
         setSetting(true);
     } 
     const handleCLose=()=>{
         setSetting(false)
+    }
+    const handleClick=(e)=>{
+      e.preventDefault();
+      let filteredMovie = movies.filter(
+        (movie) => movie.title === input
+      );
+      setMovies(filteredMovie);
     }
     useEffect(()=>{
          setSetting(false);
@@ -37,6 +45,15 @@ const NavBar = () => {
               <FavoriteBorderOutlinedIcon className={styles.favoriteLink} />
             </Link>
             <SettingsIcon onClick={handleShow} className={styles.setting} />
+            <form>
+              <input
+                type="text"
+                name="name"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+              />
+              <button onClick={handleClick}>Search</button> 
+            </form>
           </div>
         </div>
 

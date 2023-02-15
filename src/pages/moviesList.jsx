@@ -13,7 +13,7 @@ const MoviesList = () => {
         <h2>Hello Verycreatives</h2>
         <p>check these movies out</p>
       </div>
-      {movies && movies.length > 0 ? (
+      {movies?.length > 0 ? (
         <div className={styles.container}>
           {movies &&
             movies.map((movie) => (
